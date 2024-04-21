@@ -3,6 +3,7 @@ import React from "react";
 import { auth } from "../firestoreConfig";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
+import PaypalButton from "../Components/PaypalButton";
 
 const Product = () => {
   function ProductCard({ product }) {
@@ -15,9 +16,10 @@ const Product = () => {
         />
         <div className="px-6 py-4">
           <div className="font-bold text-xl mb-2">{product.name}</div>
-          <p className="text-gray-700 text-base">
-            Price: ${product.priceUSD} or {product.priceINR} INR
-          </p>
+          <p className="text-gray-700 text-base">Price: ${product.price}</p>
+        </div>
+        <div className="paypalButtons px-6">
+          <PaypalButton product={product} />
         </div>
       </div>
     );
@@ -26,9 +28,8 @@ const Product = () => {
   const productsArray = [
     {
       id: 1,
-      name: "Product A",
-      priceUSD: 1,
-      priceINR: 75,
+      name: "Air Jordan 1",
+      price: 1,
       image:
         "https://images.unsplash.com/photo-1603787081207-362bcef7c144?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c25lYWtlcnxlbnwwfHwwfHx8MA%3D%3D",
     },
