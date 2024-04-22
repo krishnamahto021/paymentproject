@@ -130,7 +130,7 @@ function SignUp() {
         </div>
         <div className="testCredentials  mt-4 flex flex-col gap-1 font-thin ">
           <h4 className="font-bold text-gray-400">Test Credentials : </h4>
-          <p className="text-gray-300">Email : mahtokrishna092001@gmail.com </p>
+          <p className="text-gray-300">Email : krishnamahato092001@gmail.com</p>
           <p className="text-gray-300"> Password : Krishna@01</p>
         </div>
       </form>
