@@ -113,7 +113,7 @@ function SignUp() {
         </div>
         <div className="flex items-center justify-between flex-col md:flex-row">
           <button
-            className="bg-[#94D3C2] hover:bg-[#69A6A8] duration-300 text-[#080113] font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+            className="bg-[#94D3C2] hover:bg-[#69A6A8] duration-300 text-[#080113] font-semibold text-sm  rounded-full shadow-sm p-2 w-1/3"
             type="submit"
           >
             {isSignUp ? "Sign Up" : "Sign In"}

@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 
 const PaypalButton = ({ product }) => {
   const [paidFor, setPaidFor] = useState(false);
-const navigate = useNavigate();
+  const navigate = useNavigate();
   const saveDetails = async (orderId) => {
     try {
       // Save purchase details to Firestore
@@ -18,6 +18,7 @@ const navigate = useNavigate();
         orderId,
         product,
       });
+      navigate("/my-orders");
       toast.success("Redirecting you to the order page");
     } catch (error) {
       console.error("Error saving purchase details:", error);
