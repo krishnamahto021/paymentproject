@@ -17,7 +17,6 @@ const Orders = () => {
           where("userId", "==", userId)
         );
         const querySnapshot = await getDocs(ordersQuery);
-        console.log(querySnapshot.docs[0].data());
         // Extract order details from the query snapshot
         const ordersData = querySnapshot.docs.map((doc) => ({
           id: doc.id,

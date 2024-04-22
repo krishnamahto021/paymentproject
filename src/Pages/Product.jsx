@@ -35,6 +35,19 @@ const Product = () => {
       <div className="fixed top-2 right-2 px-4 py-2 font-semibold text-sm bg-red-600 text-white rounded-full shadow-sm">
         <button onClick={handleLogOut}>Log Out</button>
       </div>
+      <div className="fixed top-2 left-2 px-4 py-2 font-semibold text-sm bg-cyan-500 text-white rounded-full shadow-sm">
+        <button onClick={() => navigate("/my-orders")}>My Orders</button>
+      </div>
+
+      <div className="testCredentials  mt-4 flex flex-col gap-1 font-thin fixed top-1/3 left-2 shadow-xl shadow-slate-600 rounded-md p-4">
+        <h4 className="font-bold text-gray-400 capitalize">
+          Test Credentials For paypal:
+        </h4>
+        <p className="text-gray-300">
+          Email : sb-0tnhe30531873@personal.example.com
+        </p>
+        <p className="text-gray-300"> Password : a|IE/D15</p>
+      </div>
       {products.map((product) => (
         <ProductCard key={product.id} product={product} />
       ))}

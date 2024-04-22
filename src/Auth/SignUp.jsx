@@ -64,7 +64,7 @@ function SignUp() {
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-tr from-[#222A3A] to-[#080113]">
       <form
         onSubmit={handleSubmit}
-        className="bg-gray-900 shadow-md rounded px-8 pt-6 pb-8 mb-4 w-[80%] sm:w-1/2 md:w-fit  "
+        className="bg-gray-900 shadow-md rounded px-8 pt-6 pb-8 mb-4 w-[80%] sm:w-[40vw]   "
       >
         <div className="mb-4">
           <label
@@ -74,7 +74,7 @@ function SignUp() {
             Email
           </label>
           <input
-            className="shadow appearance-none border rounded w-full py-2 px-3 text-white leading-tight focus:outline-none focus:shadow-outline"
+            className="shadow appearance-none border rounded w-full py-2 px-3 text-black leading-tight focus:outline-none focus:shadow-outline"
             id="email"
             type="email"
             name="email"
@@ -119,7 +119,7 @@ function SignUp() {
             {isSignUp ? "Sign Up" : "Sign In"}
           </button>
           <button
-            className=" hover:bg-gray-900 text-white  py-2 font-thin px-4 rounded focus:outline-none focus:shadow-outline"
+            className=" hover:bg-gray-900 text-white  py-2 font-thin px-4 rounded focus:outline-none focus:shadow-outline underline"
             type="button"
             onClick={() => setIsSignUp((prev) => !prev)}
           >
@@ -127,6 +127,11 @@ function SignUp() {
               ? "Already have an account? Sign In"
               : "Need an account? Sign Up"}
           </button>
+        </div>
+        <div className="testCredentials  mt-4 flex flex-col gap-1 font-thin ">
+          <h4 className="font-bold text-gray-400">Test Credentials : </h4>
+          <p className="text-gray-300">Email : mahtokrishna092001@gmail.com </p>
+          <p className="text-gray-300"> Password : Krishna@01</p>
         </div>
       </form>
     </div>

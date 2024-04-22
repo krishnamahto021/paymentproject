@@ -30,7 +30,8 @@ const ProductCard = ({ product }) => {
           )}
         </p>
       </div>
-      <div className="couponsContainer py-1">
+      <div className="couponsContainer">
+      <p>Offers </p>
         {product.coupons.map((c, index) => (
           <button
             key={index}
