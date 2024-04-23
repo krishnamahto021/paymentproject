@@ -46,6 +46,11 @@ const Orders = () => {
       </button>
       <h2 className="text-3xl font-bold mb-4">Your Orders</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        {orders.length === 0 && (
+          <p className="text-white block m-auto font-bold text-6xl">
+            No orders yet{" "}
+          </p>
+        )}
         {orders.map((order) => (
           <div
             key={order.id}
